@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "scotlandmod:entrail"
+    },
+    {
+      "item": "scotlandmod:prepared_stone"
+    }
+  ],
+  "result": {
+    "item": "scotlandmod:haggis",
+    "count": 1
+  }
+}
