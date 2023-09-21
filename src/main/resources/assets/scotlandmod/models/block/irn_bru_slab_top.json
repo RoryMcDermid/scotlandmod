@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "minecraft:block/slab_top",
   "textures": {
     "top": "scotlandmod:block/irn_bru_top",
     "bottom": "scotlandmod:block/irn_bru_bottom",

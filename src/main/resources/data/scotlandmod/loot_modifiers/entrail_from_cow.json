@@ -18,7 +18,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "type": "minecraft:pig"
+        "type": "minecraft:cow"
       }
     },
     {

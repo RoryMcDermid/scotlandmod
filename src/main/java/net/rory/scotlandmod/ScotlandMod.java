@@ -10,6 +10,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.rory.scotlandmod.block.ModBlocks;
+import net.rory.scotlandmod.effect.ModEffects;
 import net.rory.scotlandmod.item.ModItems;
 import net.rory.scotlandmod.loot.ModLootModifiers;
 import org.slf4j.Logger;
@@ -27,7 +29,11 @@ public class ScotlandMod
 
         ModItems.register(modEventBus);
 
+        ModBlocks.register(modEventBus);
+
         ModLootModifiers.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -52,6 +58,6 @@ public class ScotlandMod
 
         }
 
-        
+
     }
 }

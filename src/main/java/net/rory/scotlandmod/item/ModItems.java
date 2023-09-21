@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.rory.scotlandmod.ScotlandMod;
+import net.rory.scotlandmod.effect.ModEffects;
 import net.rory.scotlandmod.item.custom.DrinkItem;
 
 public class ModItems {
@@ -16,13 +17,15 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, ScotlandMod.MOD_ID);
 
     public static final RegistryObject<Item> HAGGIS = ITEMS.register("haggis",
-            () -> new Item(new Item.Properties().tab(ModCreativeModTab.SCOTLAND_TAB).food(Foods.HAGGIS_PROPERTIES)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB).food(Foods.HAGGIS_PROPERTIES)));
+    public static final RegistryObject<Item> SAUSAGE = ITEMS.register("sausage",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB).food(Foods.SAUSAGE_PROPERTIES)));
     public static final RegistryObject<Item> IRN_BRU = ITEMS.register("irn_bru",
-            () -> new DrinkItem(new Item.Properties().tab(ModCreativeModTab.SCOTLAND_TAB).food(Foods.Irn_Bru_PROPERTIES)));
+            () -> new DrinkItem(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB).food(Foods.Irn_Bru_PROPERTIES)));
     public static final RegistryObject<Item> PREPARED_STONE = ITEMS.register("prepared_stone",
-            () -> new Item(new Item.Properties().tab(ModCreativeModTab.SCOTLAND_TAB)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB)));
     public static final RegistryObject<Item> ENTRAIL = ITEMS.register("entrail",
-            () -> new Item(new Item.Properties().tab(ModCreativeModTab.SCOTLAND_TAB)));
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB)));
 
 
 
@@ -39,10 +42,15 @@ public class ModItems {
                 .meat()
                 .effect(() -> new MobEffectInstance(MobEffects.HARM, 1), 0.5f)
                 .build();
+        public static final FoodProperties SAUSAGE_PROPERTIES = new FoodProperties.Builder()
+                .nutrition(8)
+                .saturationMod(0.6f)
+                .meat()
+                .build();
         public static final FoodProperties Irn_Bru_PROPERTIES = new FoodProperties.Builder()
                 .nutrition(0)
                 .saturationMod(0.0f)
-                .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 100, 1), 1f)
+                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 200, 0), 1f)
                 .fast()
                 .alwaysEat()
                 .build();

@@ -25,10 +25,10 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "scotlandmod:irn_bru_slab"
+          "name": "scotlandmod:irn_bru"
         }
       ],
-      "rolls": 1.0
+      "rolls": 9.0
     }
   ]
 }

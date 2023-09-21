@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "top": "scotlandmod:block/irn_bru_top",
     "bottom": "scotlandmod:block/irn_bru_bottom",

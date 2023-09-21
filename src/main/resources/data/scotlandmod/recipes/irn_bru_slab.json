@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "tutorialmod:zircon"
+      "item": "scotlandmod:irn_bru"
     }
   },
   "result": {
-    "item": "tutorialmod:zircon_block"
+    "item": "scotlandmod:irn_bru_slab"
   }
 }

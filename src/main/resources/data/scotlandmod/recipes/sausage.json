@@ -5,11 +5,11 @@
       "item": "scotlandmod:entrail"
     },
     {
-      "item": "scotlandmod:prepared_stone"
+      "item": "minecraft:cooked_porkchop"
     }
   ],
   "result": {
-    "item": "scotlandmod:haggis",
+    "item": "scotlandmod:sausage",
     "count": 1
   }
 }

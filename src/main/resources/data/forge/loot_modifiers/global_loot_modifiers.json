@@ -1,6 +1,10 @@
 {
   "replace": false,
   "entries": [
+    "scotlandmod:entrail_from_sheep",
+    "scotlandmod:entrail_from_chicken",
+    "scotlandmod:entrail_from_cow",
+    "scotlandmod:entrail_from_horse",
     "scotlandmod:entrail_from_pig"
   ]
 }
