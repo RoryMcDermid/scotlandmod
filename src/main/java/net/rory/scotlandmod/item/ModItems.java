@@ -11,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rory.scotlandmod.ScotlandMod;
 import net.rory.scotlandmod.effect.ModEffects;
 import net.rory.scotlandmod.item.custom.DrinkItem;
+import net.rory.scotlandmod.item.custom.HaggisItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -40,7 +41,6 @@ public class ModItems {
                 .nutrition(6)
                 .saturationMod(0.6f)
                 .meat()
-                .effect(() -> new MobEffectInstance(MobEffects.HARM, 1), 0.5f)
                 .build();
         public static final FoodProperties SAUSAGE_PROPERTIES = new FoodProperties.Builder()
                 .nutrition(8)
