@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#X",
+    " # ",
+    "X#X"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:oak_log"
+    },
+    "X": {
+      "item": "minecraft:diamond"
+    }
+
+  },
+  "result": {
+    "item": "scotlandmod:diamond_caberette",
+    "count": 1
+  }
+}
