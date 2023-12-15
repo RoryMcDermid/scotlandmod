@@ -26,12 +26,13 @@ public class ModEventSubscriber {
                 if (player.hasEffect(ModEffects.SCOTTISH_EFFECT.get())) {
                     // Apply a new status effect (e.g., DAMAGE_RESISTANCE) to the player
                     player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0));
-                }
-                else {
+                } else {
                     player.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 0));
                 }
             }
         }
     }
+
+
 
 }

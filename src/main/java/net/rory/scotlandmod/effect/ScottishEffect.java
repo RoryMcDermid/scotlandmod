@@ -9,6 +9,8 @@ public class ScottishEffect extends MobEffect {
         super(category, colour);
     }
 
+//    public
+
 
 
 

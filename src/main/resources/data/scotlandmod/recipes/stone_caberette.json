@@ -1,18 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "X#X",
     " # ",
-    " # ",
-    " # "
+    "X#X"
   ],
   "key": {
     "#": {
-      "item": "minecraft:oak_log"
+      "tag": "minecraft:logs"
+    },
+    "X": {
+      "item": "minecraft:stone"
     }
 
   },
   "result": {
-    "item": "scotlandmod:caberette",
+    "item": "scotlandmod:stone_caberette",
     "count": 1
   }
 }

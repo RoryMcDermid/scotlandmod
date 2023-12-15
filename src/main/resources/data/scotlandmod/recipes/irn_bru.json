@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:iron_nugget"
+      "item": "scotlandmod:can"
     },
     "X": {
       "item": "minecraft:carrot"
@@ -22,6 +22,6 @@
   },
   "result": {
     "item": "scotlandmod:irn_bru",
-    "count": 2
+    "count": 6
   }
 }

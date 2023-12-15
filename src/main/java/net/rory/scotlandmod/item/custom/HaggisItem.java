@@ -9,5 +9,6 @@ public class HaggisItem extends Item {
         super(properties);
     }
 
+    //custom code is in ModEventSubscriber
 
 }

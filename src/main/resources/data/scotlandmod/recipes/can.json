@@ -1,27 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#X#",
-    "#Y#",
-    "#Z#"
+    "###",
+    "# #",
+    "###"
   ],
   "key": {
     "#": {
       "item": "minecraft:iron_nugget"
-    },
-    "X": {
-      "item": "minecraft:carrot"
-    },
-    "Y": {
-      "item": "minecraft:iron_ingot"
-    },
-    "Z": {
-      "item": "minecraft:sugar"
     }
 
   },
   "result": {
-    "item": "scotlandmod:irn_bru",
-    "count": 2
+    "item": "scotlandmod:can",
+    "count": 8
   }
 }

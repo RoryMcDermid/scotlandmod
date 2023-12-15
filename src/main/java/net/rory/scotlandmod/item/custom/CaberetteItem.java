@@ -16,10 +16,10 @@ import net.rory.scotlandmod.effect.ModEffects;
 import java.util.Collection;
 import java.util.Map;
 
-public class DemiCaberItem extends SwordItem {
+public class CaberetteItem extends SwordItem {
 
 
-    public DemiCaberItem(Tier p_43269_, int p_43270_, float AttackSpeed, Properties p_43272_) {
+    public CaberetteItem(Tier p_43269_, int p_43270_, float AttackSpeed, Properties p_43272_) {
         super(p_43269_, p_43270_, AttackSpeed, p_43272_);
     }
 
@@ -33,7 +33,6 @@ public class DemiCaberItem extends SwordItem {
         MobEffectInstance scotlandEffect = null;
 
         Collection<MobEffectInstance> activeEffects = attacker.getActiveEffects();
-        attacker.sendSystemMessage(Component.nullToEmpty("Original damage is:" + this.getDamage()));
 
         // Iterate through potion effects and modify damage accordingly
         for (MobEffectInstance effectInstance : activeEffects) {
@@ -44,7 +43,6 @@ public class DemiCaberItem extends SwordItem {
                 float damageModifier = 1.0F + 0.2F * (effectInstance.getAmplifier() + 1);
                 float modifiedDamage = this.getDamage() * damageModifier;
                 target.hurt(DamageSource.playerAttack((Player) attacker), modifiedDamage);
-                attacker.sendSystemMessage(Component.nullToEmpty("Modified damage is:" + modifiedDamage + ""));
             }
         }
 

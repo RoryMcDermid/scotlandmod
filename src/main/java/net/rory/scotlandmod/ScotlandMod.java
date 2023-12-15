@@ -7,6 +7,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rory.scotlandmod.block.ModBlocks;
 import net.rory.scotlandmod.effect.ModEffects;
+import net.rory.scotlandmod.item.ModCreativeModeTabs;
 import net.rory.scotlandmod.item.ModItems;
 import net.rory.scotlandmod.loot.ModLootModifiers;
 import org.slf4j.Logger;
@@ -43,6 +45,8 @@ public class ScotlandMod
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -50,6 +54,27 @@ public class ScotlandMod
 
     }
 
+    private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if(event.getTab() == ModCreativeModeTabs.SCOTLAND_TAB){
+            event.accept(ModItems.IRN_BRU);
+            event.accept(ModItems.IRN_BRU_1901);
+            event.accept(ModItems.Bunnet);
+            event.accept(ModItems.Creative_Bunnet);
+            event.accept(ModItems.KILT);
+            event.accept(ModItems.Caberette);
+            event.accept(ModItems.Stone_Banded_Caberette);
+            event.accept(ModItems.Iron_Banded_Caberette);
+            event.accept(ModItems.Gold_Banded_Caberette);
+            event.accept(ModItems.Diamond_Banded_Caberette);
+            event.accept(ModItems.Netherite_Banded_Caberette);
+            event.accept(ModItems.Can);
+            event.accept(ModItems.ENTRAIL);
+            event.accept(ModItems.HAGGIS);
+            event.accept(ModItems.SAUSAGE);
+            event.accept(ModItems.PREPARED_STONE);
+            event.accept(ModBlocks.IRN_BRU_SLAB);
+        }
+    }
 
 
 

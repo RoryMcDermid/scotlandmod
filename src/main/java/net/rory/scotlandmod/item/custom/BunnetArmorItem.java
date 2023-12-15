@@ -1,5 +1,7 @@
 package net.rory.scotlandmod.item.custom;
 
+import com.mojang.brigadier.LiteralMessage;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -10,17 +12,17 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.rory.scotlandmod.effect.ModEffects;
 
 
-
-public class KiltArmorItem extends ArmorItem {
+public class BunnetArmorItem extends ArmorItem {
 
     private int buffLevel;
 
 
 
 
-    public KiltArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
+    public BunnetArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
         super(armorMaterial, equipmentSlot, properties);
         buffLevel = buffLevelIn;
     }
@@ -28,11 +30,11 @@ public class KiltArmorItem extends ArmorItem {
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
         super.onArmorTick(stack, level, player);
-        // Check if the armor is worn on the player's head
-        if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == this) {
-            // Apply the speed effect
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, buffLevel)); // 20 ticks duration, level 1
-        }
+//      player.sendSystemMessage((Component) new LiteralMessage("Text"));
+//      Apply the scottish effect
+        player.addEffect(new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 20, buffLevel)); // 20 ticks duration, level 1
+
+//
     }
 
 

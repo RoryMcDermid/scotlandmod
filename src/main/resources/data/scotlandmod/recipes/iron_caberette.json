@@ -7,15 +7,15 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:oak_log"
+      "tag": "minecraft:logs"
     },
     "X": {
-      "item": "minecraft:stone"
+      "item": "minecraft:iron_ingot"
     }
 
   },
   "result": {
-    "item": "scotlandmod:stone_caberette",
+    "item": "scotlandmod:iron_caberette",
     "count": 1
   }
 }

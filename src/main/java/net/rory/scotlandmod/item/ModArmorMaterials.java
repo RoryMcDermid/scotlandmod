@@ -10,11 +10,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public class ModItemMaterials implements ArmorMaterial {
+public enum ModArmorMaterials implements ArmorMaterial {
 
 
-    NETHERITE("netherite", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.of(Items.NETHERITE_INGOT);
+    KILT("kilt", 5, new int[]{1, 1, 2, 1}, 15, SoundEvents.WOOL_PLACE, 0.0F, 0.0F, () -> {
+        //This is the item that repairs it
+        return Ingredient.of(Items.WHITE_WOOL);
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
