@@ -18,7 +18,7 @@ public class KiltArmorItem extends ArmorItem {
 
 
 
-    public KiltArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
+    public KiltArmorItem(ArmorMaterial armorMaterial, ArmorItem.Type equipmentSlot, Properties properties, int buffLevelIn) {
         super(armorMaterial, equipmentSlot, properties);
         buffLevel = buffLevelIn;
     }

@@ -22,7 +22,7 @@ public class BunnetArmorItem extends ArmorItem {
 
 
 
-    public BunnetArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
+    public BunnetArmorItem(ArmorMaterial armorMaterial, ArmorItem.Type equipmentSlot, Properties properties, int buffLevelIn) {
         super(armorMaterial, equipmentSlot, properties);
         buffLevel = buffLevelIn;
     }

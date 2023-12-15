@@ -3,6 +3,8 @@ package net.rory.scotlandmod.item;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,12 +38,11 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> KILT = ITEMS.register("kilt",
-            () -> new KiltArmorItem(ModArmorMaterials.KILT, EquipmentSlot.LEGS, new Item.Properties(), 0));
+            () -> new KiltArmorItem(ModArmorMaterials.KILT, ArmorItem.Type.LEGGINGS, new Item.Properties(), 0));
     public static final RegistryObject<Item> Bunnet = ITEMS.register("bunnet",
-            () -> new BunnetArmorItem(ModArmorMaterials.KILT, EquipmentSlot.HEAD, new Item.Properties(), 0));
+            () -> new BunnetArmorItem(ModArmorMaterials.KILT, ArmorItem.Type.HELMET, new Item.Properties(), 0));
     public static final RegistryObject<Item> Creative_Bunnet = ITEMS.register("creative_bunnet",
-            () -> new BunnetArmorItem(ModArmorMaterials.KILT, EquipmentSlot.HEAD, new Item.Properties(), 99));
-
+            () -> new BunnetArmorItem(ModArmorMaterials.KILT, ArmorItem.Type.HELMET, new Item.Properties(), 99));
 
     public static final RegistryObject<Item> Caberette = ITEMS.register("caberette",
             () -> new CaberetteItem(Tiers.WOOD, 4, -2.8F, new Item.Properties()));
