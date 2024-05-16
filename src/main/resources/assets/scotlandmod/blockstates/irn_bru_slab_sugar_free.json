@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "scotlandmod:block/irn_bru_slab_sugar_free"
+    },
+    "type=double": {
+      "model": "scotlandmod:block/irn_bru_block_sugar_free"
+    },
+    "type=top": {
+      "model": "scotlandmod:block/irn_bru_slab_top_sugar_free"
+    }
+  }
+}

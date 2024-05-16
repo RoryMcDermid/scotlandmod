@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "top": "scotlandmod:block/irn_bru_top_1901",
+    "bottom": "scotlandmod:block/irn_bru_bottom_1901",
+    "side": "scotlandmod:block/irn_bru_side_1901"
+  }
+}
+
