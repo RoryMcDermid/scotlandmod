@@ -33,7 +33,6 @@ public class CaberetteItem extends SwordItem {
         MobEffectInstance scotlandEffect = null;
 
         Collection<MobEffectInstance> activeEffects = attacker.getActiveEffects();
-        attacker.sendSystemMessage(Component.nullToEmpty("Original damage is:" + this.getDamage()));
 
         // Iterate through potion effects and modify damage accordingly
         for (MobEffectInstance effectInstance : activeEffects) {
@@ -44,7 +43,6 @@ public class CaberetteItem extends SwordItem {
                 float damageModifier = 1.0F + 0.2F * (effectInstance.getAmplifier() + 1);
                 float modifiedDamage = this.getDamage() * damageModifier;
                 target.hurt(DamageSource.playerAttack((Player) attacker), modifiedDamage);
-                attacker.sendSystemMessage(Component.nullToEmpty("Modified damage is:" + modifiedDamage + ""));
             }
         }
 
