@@ -1,14 +1,41 @@
 {
   "item.scotlandmod.haggis": "Haggis",
   "item.scotlandmod.irn_bru": "Irn Bru",
+  "item.scotlandmod.irn_bru_1901": "Irn Bru 1901",
+  "item.scotlandmod.irn_bru_sugar_free": "Sugar Free Irn Bru",
+
+  "item.scotlandmod.can": "Can",
   "item.scotlandmod.prepared_stone": "Prepared Stone",
   "item.scotlandmod.entrail": "Entrails",
   "item.scotlandmod.sausage": "Sausages",
+  "item.scotlandmod.twine": "Twine",
+
+  "item.scotlandmod.kilt": "Woven Kilt",
+  "item.scotlandmod.chain_kilt": "Chain Laced Kilt",
+  "item.scotlandmod.iron_kilt": "Iron Inlaid Kilt",
+  "item.scotlandmod.gold_kilt": "Gold Inlaid Kilt",
+  "item.scotlandmod.diamond_kilt": "Diamond Inlaid Kilt",
+  "item.scotlandmod.netherite_kilt": "Netherite Inlaid Kilt",
+
+  "item.scotlandmod.bunnet": "Bunnet",
+  "item.scotlandmod.creative_bunnet": "Creative Bunnet",
+
+  "item.scotlandmod.caberette": "Caberette",
+  "item.scotlandmod.stone_caberette": "Stone Banded Caberette",
+  "item.scotlandmod.iron_caberette": "Iron Banded Caberette",
+  "item.scotlandmod.gold_caberette": "Gold Banded Caberette",
+  "item.scotlandmod.diamond_caberette": "Diamond Banded Caberette",
+  "item.scotlandmod.netherite_caberette": "Netherite Banded Caberette",
 
   "block.scotlandmod.irn_bru_slab": "Irn Bru 9 Pack",
+  "block.scotlandmod.irn_bru_slab_sugar_free": "Sugar Free Irn Bru 9 Pack",
+  "block.scotlandmod.irn_bru_slab_1901": "Irn Bru 1901 9 Pack",
+  "block.scotlandmod.irn_bru_canning_station": "Irn Bru Canning Station",
 
   "effect.scotlandmod.scottish": "Scottish",
 
 
-  "itemGroup.scotlandtab": "Scotland"
+  "itemGroup.scotlandtab": "Scotland",
+
+  "creativemodetab.scotland_tab": "Scotland Tab"
 }
