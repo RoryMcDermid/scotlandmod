@@ -16,10 +16,10 @@ import net.rory.scotlandmod.effect.ModEffects;
 import java.util.Collection;
 import java.util.Map;
 
-public class DemiCaberItem extends SwordItem {
+public class CaberetteItem extends SwordItem {
 
 
-    public DemiCaberItem(Tier p_43269_, int p_43270_, float AttackSpeed, Properties p_43272_) {
+    public CaberetteItem(Tier p_43269_, int p_43270_, float AttackSpeed, Properties p_43272_) {
         super(p_43269_, p_43270_, AttackSpeed, p_43272_);
     }
 

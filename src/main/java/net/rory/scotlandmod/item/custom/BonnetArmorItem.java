@@ -13,14 +13,14 @@ import net.minecraft.world.level.Level;
 
 
 
-public class KiltArmorItem extends ArmorItem {
+public class BonnetArmorItem extends ArmorItem {
 
     private int buffLevel;
 
 
 
 
-    public KiltArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
+    public BonnetArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
         super(armorMaterial, equipmentSlot, properties);
         buffLevel = buffLevelIn;
     }
