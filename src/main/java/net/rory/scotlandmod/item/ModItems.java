@@ -24,10 +24,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(Foods.SAUSAGE_PROPERTIES).tab(ModCreativeModeTab.SCOTLAND_TAB)));
     public static final RegistryObject<Item> IRN_BRU = ITEMS.register("irn_bru",
             () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_PROPERTIES).tab(ModCreativeModeTab.SCOTLAND_TAB)));
-//    public static final RegistryObject<Item> IRN_BRU_1901 = ITEMS.register("irn_bru_1901",
-//            () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_1901_PROPERTIES).tab(ModCreativeModeTab.SCOTLAND_TAB)));
-//    public static final RegistryObject<Item> IRN_BRU_SUGAR_FREE = ITEMS.register("irn_bru_sugar_free",
-//            () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_SUGAR_FREE_PROPERTIES).tab(ModCreativeModeTab.SCOTLAND_TAB)));
+    public static final RegistryObject<Item> IRN_BRU_1901 = ITEMS.register("irn_bru_1901",
+            () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_1901_PROPERTIES).tab(ModCreativeModeTab.SCOTLAND_TAB)));
+    public static final RegistryObject<Item> IRN_BRU_SUGAR_FREE = ITEMS.register("irn_bru_sugar_free",
+            () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_SUGAR_FREE_PROPERTIES).tab(ModCreativeModeTab.SCOTLAND_TAB)));
 
 
     public static final RegistryObject<Item> PREPARED_STONE = ITEMS.register("prepared_stone",
@@ -94,6 +94,20 @@ public class ModItems {
                 .nutrition(0)
                 .saturationMod(0.0f)
                 .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 200, 0), 1f)
+                .fast()
+                .alwaysEat()
+                .build();
+        public static final FoodProperties Irn_Bru_1901_PROPERTIES = new FoodProperties.Builder()
+                .nutrition(0)
+                .saturationMod(0.0f)
+                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 2400, 2), 1f)
+                .fast()
+                .alwaysEat()
+                .build();
+        public static final FoodProperties Irn_Bru_SUGAR_FREE_PROPERTIES = new FoodProperties.Builder()
+                .nutrition(0)
+                .saturationMod(0.0f)
+                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 1800, 0), 1f)
                 .fast()
                 .alwaysEat()
                 .build();

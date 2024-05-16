@@ -7,15 +7,15 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:sugar"
+      "item": "scotlandmod:irn_bru"
     },
     "X": {
-      "item": "scotlandmod:irn_bru"
+      "item": "minecraft:sugar"
     }
 
   },
   "result": {
     "item": "scotlandmod:irn_bru_1901",
-    "count": 1
+    "count": 8
   }
 }
