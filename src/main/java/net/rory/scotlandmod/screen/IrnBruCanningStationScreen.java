@@ -44,8 +44,6 @@ public class IrnBruCanningStationScreen extends AbstractContainerScreen<IrnBruCa
     }
 
 
-
-
     @Override
     public void render(PoseStack pPoseStack, int mouseX, int mouseY, float delta) {
         renderBackground(pPoseStack);
