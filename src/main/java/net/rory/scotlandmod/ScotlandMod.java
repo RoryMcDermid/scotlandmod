@@ -1,6 +1,7 @@
 package net.rory.scotlandmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -16,9 +17,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rory.scotlandmod.block.ModBlocks;
+import net.rory.scotlandmod.block.entity.ModBlockEntities;
 import net.rory.scotlandmod.effect.ModEffects;
 import net.rory.scotlandmod.item.ModItems;
 import net.rory.scotlandmod.loot.ModLootModifiers;
+import net.rory.scotlandmod.screen.IrnBruCanningStationScreen;
+import net.rory.scotlandmod.screen.ModMenuTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -40,6 +44,11 @@ public class ScotlandMod
 
         ModEffects.register(modEventBus);
 
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -60,7 +69,7 @@ public class ScotlandMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            MenuScreens.register(ModMenuTypes.IRN_BRU_CANNING_STATION_MENU.get(), IrnBruCanningStationScreen::new);
         }
 
 

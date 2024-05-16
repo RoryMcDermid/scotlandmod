@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "X#X",
     " # ",
-    " # ",
-    " # "
+    "X#X"
   ],
   "key": {
     "#": {
@@ -12,7 +12,7 @@
 
   },
   "result": {
-    "item": "scotlandmod:caberette",
+    "item": "scotlandmod:stone_caberette",
     "count": 1
   }
 }

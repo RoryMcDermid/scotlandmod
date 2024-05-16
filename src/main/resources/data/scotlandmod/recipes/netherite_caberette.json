@@ -1,21 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X#X",
-    " # ",
-    "X#X"
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:oak_log"
-    },
-    "X": {
-      "item": "minecraft:diamond"
-    }
-
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "scotlandmod:diamond_caberette"
   },
   "result": {
-    "item": "scotlandmod:diamond_caberette",
-    "count": 1
+    "item": "scotlandmod:netherite_caberette"
   }
 }

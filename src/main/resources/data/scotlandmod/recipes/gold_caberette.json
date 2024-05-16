@@ -10,12 +10,12 @@
       "item": "minecraft:oak_log"
     },
     "X": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     }
 
   },
   "result": {
-    "item": "scotlandmod:stone_caberette",
+    "item": "scotlandmod.gold_caberette",
     "count": 1
   }
 }
