@@ -23,5 +23,4 @@ public class DrinkItem extends Item {
 
 
 
-
 }
