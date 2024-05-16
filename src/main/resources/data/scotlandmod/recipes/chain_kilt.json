@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X#",
+    "Y Y",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:wool"
+    },
+    "X": {
+      "item": "scotlandmod:twine"
+    },
+    "Y": {
+      "item": "minecraft:chain"
+    }
+
+  },
+  "result": {
+    "item": "scotlandmod:chain_kilt",
+    "count": 1
+  }
+}

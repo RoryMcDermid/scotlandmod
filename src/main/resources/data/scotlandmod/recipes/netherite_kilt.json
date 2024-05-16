@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "scotlandmod:diamond_kilt"
+  },
+  "result": {
+    "item": "scotlandmod:netherite_kilt"
+  }
+}

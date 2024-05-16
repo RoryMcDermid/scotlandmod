@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X#X",
-    " # ",
-    "X#X"
+    "#X#",
+    "# #",
+    "# #"
   ],
   "key": {
     "#": {
-      "tag": "minecraft:logs"
+      "item": "minecraft:iron_ingot"
     },
     "X": {
-      "item": "minecraft:stone"
+      "item": "scotlandmod:twine"
     }
 
   },
   "result": {
-    "item": "scotlandmod:stone_caberette",
+    "item": "scotlandmod:iron_kilt",
     "count": 1
   }
 }

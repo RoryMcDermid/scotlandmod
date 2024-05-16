@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:oak_log"
+      "tag": "minecraft:logs"
     },
     "X": {
       "item": "minecraft:iron_ingot"

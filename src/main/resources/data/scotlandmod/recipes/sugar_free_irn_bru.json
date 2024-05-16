@@ -3,7 +3,7 @@
   "pattern": [
     "#X#",
     "#Y#",
-    "#Z#"
+    "###"
   ],
   "key": {
     "#": {
@@ -14,14 +14,11 @@
     },
     "Y": {
       "item": "minecraft:iron_ingot"
-    },
-    "Z": {
-      "item": "minecraft:sugar"
     }
 
   },
   "result": {
-    "item": "scotlandmod:irn_bru",
-    "count": 6
+    "item": "scotlandmod:sugar_free_irn_bru",
+    "count": 7
   }
 }
