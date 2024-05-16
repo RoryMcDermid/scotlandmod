@@ -14,27 +14,27 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
 
 
-    WOOLEN("woolen", 5, new int[]{1, 1, 2, 1}, 15, SoundEvents.WOOL_PLACE, 0.0F, 0.0F, () -> {
+    WOOLEN("woolen", 5, new int[]{1, 2, 1, 1}, 15, SoundEvents.WOOL_PLACE, 0.0F, 0.0F, () -> {
         //This is the item that repairs it
         return Ingredient.of(Items.WHITE_WOOL);
     }),
-    CHAIN_WOOLEN("chain_woolen", 15, new int[] {1,4,3,1}, 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0f, 0.0f, () -> {
+    CHAIN_WOOLEN("chain_woolen", 15, new int[] {1,3,4,1}, 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0f, 0.0f, () -> {
         //This is the item that repairs it
         return Ingredient.of(Items.CHAIN);
     }),
-    IRON_WOOLEN("iron_woolen", 15, new int[] {1,5,4,1}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
+    IRON_WOOLEN("iron_woolen", 15, new int[] {1,4,5,1}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
         //This is the item that repairs it
         return Ingredient.of(Items.IRON_INGOT);
     }),
-    GOLD_WOOLEN("gold_woolen", 7, new int[] {1,4,2,1}, 25, SoundEvents.ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> {
+    GOLD_WOOLEN("gold_woolen", 7, new int[] {1,2,4,1}, 25, SoundEvents.ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> {
         //This is the item that repairs it
         return Ingredient.of(Items.GOLD_INGOT);
     }),
-    DIAMOND_WOOLEN("diamond_woolen", 33, new int[] {2,7,5,2}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> {
+    DIAMOND_WOOLEN("diamond_woolen", 33, new int[] {2,5,7,2}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> {
         //This is the item that repairs it
         return Ingredient.of(Items.DIAMOND);
     }),
-    NETHERITE_WOOLEN("netherite_woolen", 37, new int[] {2,7,5,2}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5f, 0.1f, () -> {
+    NETHERITE_WOOLEN("netherite_woolen", 37, new int[] {2,5,7,2}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5f, 0.1f, () -> {
         //This is the item that repairs it
         return Ingredient.of(Items.NETHERITE_INGOT);
     }),

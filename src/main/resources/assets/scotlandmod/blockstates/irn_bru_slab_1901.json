@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "scotlandmod:block/irn_bru_slab_1901"
+    },
+    "type=double": {
+      "model": "scotlandmod:block/irn_bru_block_1901"
+    },
+    "type=top": {
+      "model": "scotlandmod:block/irn_bru_slab_top_1901"
+    }
+  }
+}

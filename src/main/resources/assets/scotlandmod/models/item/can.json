@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "scotlandmod:item/irn_bru"
+    "layer0": "scotlandmod:item/can"
   }
 }
