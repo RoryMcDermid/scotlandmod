@@ -25,27 +25,28 @@ public class ModBlocks {
 
 
     public static final RegistryObject<SlabBlock> IRN_BRU_SLAB = registerBlock("irn_bru_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)));
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
     public static final RegistryObject<SlabBlock> IRN_BRU_SLAB_SUGAR_FREE = registerBlock("irn_bru_slab_sugar_free",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)));
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
     public static final RegistryObject<SlabBlock> IRN_BRU_SLAB_1901 = registerBlock("irn_bru_slab_1901",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)));
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
     public static final RegistryObject<IrnBruCanningStation> IRN_BRU_CANNING_STATION = registerBlock("irn_bru_canning_station",
-            () -> new IrnBruCanningStation(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)));
+            () -> new IrnBruCanningStation(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
 
 
 
 
 
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
+        registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block){
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
+                                                                            CreativeModeTab tab) {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 
     public static void register(IEventBus eventBus) {
