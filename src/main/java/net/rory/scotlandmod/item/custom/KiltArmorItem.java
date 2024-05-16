@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 import net.rory.scotlandmod.effect.ModEffects;
 
 
-public class KiltArmorItem extends ArmorItem {
+public class KiltArmorItem extends ScottishArmorItem {
 
     private int buffLevel;
 
@@ -19,7 +19,7 @@ public class KiltArmorItem extends ArmorItem {
 
 
     public KiltArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
-        super(armorMaterial, equipmentSlot, properties);
+        super(armorMaterial, equipmentSlot, properties, buffLevelIn);
         buffLevel = buffLevelIn;
     }
 

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:wool"
+    }
+
+  },
+  "result": {
+    "item": "scotlandmod:kilt",
+    "count": 1
+  }
+}

@@ -15,16 +15,26 @@ import net.minecraft.world.level.Level;
 import net.rory.scotlandmod.effect.ModEffects;
 
 
-public class BunnetArmorItem extends ArmorItem {
+public class ScottishArmorItem extends ArmorItem {
 
     private int buffLevel;
 
 
 
 
-    public BunnetArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
+    public ScottishArmorItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Properties properties, int buffLevelIn) {
         super(armorMaterial, equipmentSlot, properties);
         buffLevel = buffLevelIn;
+    }
+
+    private int getNumEquipped(Player player) {
+        int count = 0;
+        for (ItemStack armorStack : player.getArmorSlots()) {
+            if (armorStack.getItem() instanceof ScottishArmorItem) {
+                count++;
+            }
+        }
+        return count;
     }
 
     @Override
@@ -32,7 +42,8 @@ public class BunnetArmorItem extends ArmorItem {
         super.onArmorTick(stack, level, player);
 //      player.sendSystemMessage((Component) new LiteralMessage("Text"));
 //      Apply the scottish effect
-        player.addEffect(new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 20, buffLevel)); // 20 ticks duration, level 1
+        int actualBuffLevel = getNumEquipped(player) * (buffLevel + 1) - 1;
+        player.addEffect(new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 20, actualBuffLevel)); // 20 ticks duration, level 1
 
 //
     }

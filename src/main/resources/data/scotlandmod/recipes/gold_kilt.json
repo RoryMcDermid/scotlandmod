@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X#",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "X": {
+      "item": "scotlandmod:twine"
+    }
+
+  },
+  "result": {
+    "item": "scotlandmod:gold_kilt",
+    "count": 1
+  }
+}

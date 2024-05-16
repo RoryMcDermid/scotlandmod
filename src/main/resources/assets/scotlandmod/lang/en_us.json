@@ -2,13 +2,21 @@
   "item.scotlandmod.haggis": "Haggis",
   "item.scotlandmod.irn_bru": "Irn Bru",
   "item.scotlandmod.irn_bru_1901": "Irn Bru 1901",
+  "item.scotlandmod.irn_bru_sugar_free": "Sugar Free Irn Bru",
 
   "item.scotlandmod.can": "Can",
   "item.scotlandmod.prepared_stone": "Prepared Stone",
   "item.scotlandmod.entrail": "Entrails",
   "item.scotlandmod.sausage": "Sausages",
+  "item.scotlandmod.twine": "Twine",
 
   "item.scotlandmod.kilt": "Woven Kilt",
+  "item.scotlandmod.chain_kilt": "Chain Laced Kilt",
+  "item.scotlandmod.iron_kilt": "Iron Inlaid Kilt",
+  "item.scotlandmod.gold_kilt": "Gold Inlaid Kilt",
+  "item.scotlandmod.diamond_kilt": "Diamond Inlaid Kilt",
+  "item.scotlandmod.netherite_kilt": "Netherite Inlaid Kilt",
+
   "item.scotlandmod.bunnet": "Bunnet",
   "item.scotlandmod.creative_bunnet": "Creative Bunnet",
 

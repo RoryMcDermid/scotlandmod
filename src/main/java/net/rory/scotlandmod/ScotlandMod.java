@@ -58,9 +58,15 @@ public class ScotlandMod
         if(event.getTab() == ModCreativeModeTabs.SCOTLAND_TAB){
             event.accept(ModItems.IRN_BRU);
             event.accept(ModItems.IRN_BRU_1901);
-            event.accept(ModItems.Bunnet);
-            event.accept(ModItems.Creative_Bunnet);
+            event.accept(ModItems.IRN_BRU_SUGAR_FREE);
+            event.accept(ModItems.BUNNET);
+            event.accept(ModItems.CREATIVE_BUNNET);
             event.accept(ModItems.KILT);
+            event.accept(ModItems.CHAIN_KILT);
+            event.accept(ModItems.IRON_KILT);
+            event.accept(ModItems.GOLD_KILT);
+            event.accept(ModItems.DIAMOND_KILT);
+            event.accept(ModItems.NETHERITE_KILT);
             event.accept(ModItems.Caberette);
             event.accept(ModItems.Stone_Banded_Caberette);
             event.accept(ModItems.Iron_Banded_Caberette);
@@ -68,6 +74,7 @@ public class ScotlandMod
             event.accept(ModItems.Diamond_Banded_Caberette);
             event.accept(ModItems.Netherite_Banded_Caberette);
             event.accept(ModItems.Can);
+            event.accept(ModItems.TWINE);
             event.accept(ModItems.ENTRAIL);
             event.accept(ModItems.HAGGIS);
             event.accept(ModItems.SAUSAGE);

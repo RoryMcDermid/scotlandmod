@@ -25,6 +25,8 @@ public class ModItems {
             () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_PROPERTIES)));
     public static final RegistryObject<Item> IRN_BRU_1901 = ITEMS.register("irn_bru_1901",
             () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_1901_PROPERTIES)));
+    public static final RegistryObject<Item> IRN_BRU_SUGAR_FREE = ITEMS.register("irn_bru_sugar_free",
+            () -> new DrinkItem(new Item.Properties().food(Foods.Irn_Bru_SUGAR_FREE_PROPERTIES)));
 
 
     public static final RegistryObject<Item> PREPARED_STONE = ITEMS.register("prepared_stone",
@@ -33,14 +35,27 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> Can = ITEMS.register("can",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TWINE = ITEMS.register("twine",
+            () -> new Item(new Item.Properties()));
+
 
 
     public static final RegistryObject<Item> KILT = ITEMS.register("kilt",
-            () -> new KiltArmorItem(ModArmorMaterials.KILT, EquipmentSlot.LEGS, new Item.Properties(), 0));
-    public static final RegistryObject<Item> Bunnet = ITEMS.register("bunnet",
-            () -> new BunnetArmorItem(ModArmorMaterials.KILT, EquipmentSlot.HEAD, new Item.Properties(), 0));
-    public static final RegistryObject<Item> Creative_Bunnet = ITEMS.register("creative_bunnet",
-            () -> new BunnetArmorItem(ModArmorMaterials.KILT, EquipmentSlot.HEAD, new Item.Properties(), 99));
+            () -> new KiltArmorItem(ModArmorMaterials.WOOLEN, EquipmentSlot.LEGS, new Item.Properties(), 0));
+    public static final RegistryObject<Item> CHAIN_KILT = ITEMS.register("chain_kilt",
+            () -> new KiltArmorItem(ModArmorMaterials.CHAIN_WOOLEN, EquipmentSlot.LEGS, new Item.Properties(), 0));
+    public static final RegistryObject<Item> IRON_KILT = ITEMS.register("iron_kilt",
+            () -> new KiltArmorItem(ModArmorMaterials.IRON_WOOLEN, EquipmentSlot.LEGS, new Item.Properties(), 0));
+    public static final RegistryObject<Item> GOLD_KILT = ITEMS.register("gold_kilt",
+            () -> new KiltArmorItem(ModArmorMaterials.GOLD_WOOLEN, EquipmentSlot.LEGS, new Item.Properties(), 1));
+    public static final RegistryObject<Item> DIAMOND_KILT = ITEMS.register("diamond_kilt",
+            () -> new KiltArmorItem(ModArmorMaterials.DIAMOND_WOOLEN, EquipmentSlot.LEGS, new Item.Properties(), 0));
+    public static final RegistryObject<Item> NETHERITE_KILT = ITEMS.register("netherite_kilt",
+            () -> new KiltArmorItem(ModArmorMaterials.NETHERITE_WOOLEN, EquipmentSlot.LEGS, new Item.Properties(), 0));
+    public static final RegistryObject<Item> BUNNET = ITEMS.register("bunnet",
+            () -> new ScottishArmorItem(ModArmorMaterials.WOOLEN, EquipmentSlot.HEAD, new Item.Properties(), 0));
+    public static final RegistryObject<Item> CREATIVE_BUNNET = ITEMS.register("creative_bunnet",
+            () -> new ScottishArmorItem(ModArmorMaterials.CREATIVE_WOOLEN, EquipmentSlot.HEAD, new Item.Properties(), 99));
 
 
     public static final RegistryObject<Item> Caberette = ITEMS.register("caberette",
@@ -78,14 +93,21 @@ public class ModItems {
         public static final FoodProperties Irn_Bru_PROPERTIES = new FoodProperties.Builder()
                 .nutrition(0)
                 .saturationMod(0.0f)
-                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 2400, 0), 1f)
+                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 4800, 1), 1f)
                 .fast()
                 .alwaysEat()
                 .build();
         public static final FoodProperties Irn_Bru_1901_PROPERTIES = new FoodProperties.Builder()
                 .nutrition(0)
                 .saturationMod(0.0f)
-                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 1200, 1), 1f)
+                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 2400, 2), 1f)
+                .fast()
+                .alwaysEat()
+                .build();
+        public static final FoodProperties Irn_Bru_SUGAR_FREE_PROPERTIES = new FoodProperties.Builder()
+                .nutrition(0)
+                .saturationMod(0.0f)
+                .effect(() -> new MobEffectInstance(ModEffects.SCOTTISH_EFFECT.get(), 1800, 0), 1f)
                 .fast()
                 .alwaysEat()
                 .build();

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/leather_helmet"
+    "layer0": "scotlandmod:item/creative_bunnet"
   }
 }

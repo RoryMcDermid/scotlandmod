@@ -7,15 +7,41 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.rory.scotlandmod.ScotlandMod;
 
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
 
 
-    KILT("kilt", 5, new int[]{1, 1, 2, 1}, 15, SoundEvents.WOOL_PLACE, 0.0F, 0.0F, () -> {
+    WOOLEN("woolen", 5, new int[]{1, 1, 2, 1}, 15, SoundEvents.WOOL_PLACE, 0.0F, 0.0F, () -> {
         //This is the item that repairs it
         return Ingredient.of(Items.WHITE_WOOL);
+    }),
+    CHAIN_WOOLEN("chain_woolen", 15, new int[] {1,4,3,1}, 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0f, 0.0f, () -> {
+        //This is the item that repairs it
+        return Ingredient.of(Items.CHAIN);
+    }),
+    IRON_WOOLEN("iron_woolen", 15, new int[] {1,5,4,1}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> {
+        //This is the item that repairs it
+        return Ingredient.of(Items.IRON_INGOT);
+    }),
+    GOLD_WOOLEN("gold_woolen", 7, new int[] {1,4,2,1}, 25, SoundEvents.ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> {
+        //This is the item that repairs it
+        return Ingredient.of(Items.GOLD_INGOT);
+    }),
+    DIAMOND_WOOLEN("diamond_woolen", 33, new int[] {2,7,5,2}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0f, 0.0f, () -> {
+        //This is the item that repairs it
+        return Ingredient.of(Items.DIAMOND);
+    }),
+    NETHERITE_WOOLEN("netherite_woolen", 37, new int[] {2,7,5,2}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5f, 0.1f, () -> {
+        //This is the item that repairs it
+        return Ingredient.of(Items.NETHERITE_INGOT);
+    }),
+    CREATIVE_WOOLEN("creative_woolen", 100, new int[] {10,10,10,10}, 15,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0f, 0.25f, () -> {
+        //This is the item that repairs it
+        return Ingredient.of(Items.NETHERITE_INGOT);
     });
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
@@ -60,7 +86,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     }
 
     public String getName() {
-        return this.name;
+        return ScotlandMod.MOD_ID + ":" + this.name;
     }
 
     public float getToughness() {
