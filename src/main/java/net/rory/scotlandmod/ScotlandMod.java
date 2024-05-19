@@ -21,6 +21,7 @@ import net.rory.scotlandmod.block.entity.ModBlockEntities;
 import net.rory.scotlandmod.effect.ModEffects;
 import net.rory.scotlandmod.item.ModItems;
 import net.rory.scotlandmod.loot.ModLootModifiers;
+import net.rory.scotlandmod.recipe.ModRecipes;
 import net.rory.scotlandmod.screen.IrnBruCanningStationScreen;
 import net.rory.scotlandmod.screen.ModMenuTypes;
 import org.slf4j.Logger;
@@ -47,6 +48,8 @@ public class ScotlandMod
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);

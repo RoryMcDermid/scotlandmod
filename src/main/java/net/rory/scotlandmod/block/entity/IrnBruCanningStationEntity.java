@@ -23,9 +23,12 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.rory.scotlandmod.block.ModBlocks;
 import net.rory.scotlandmod.item.ModItems;
+import net.rory.scotlandmod.recipe.IrnBruCanningStationRecipe;
 import net.rory.scotlandmod.screen.IrnBruCanningStationMenu;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class IrnBruCanningStationEntity extends BlockEntity implements MenuProvider {
 
@@ -151,26 +154,38 @@ public class IrnBruCanningStationEntity extends BlockEntity implements MenuProvi
         this.progress = 0;
     }
 
-    public static void craftItem(IrnBruCanningStationEntity iEntity){
-        if(hasRecipe(iEntity)){
-            iEntity.itemHandler.extractItem(1,1,false);
-            iEntity.itemHandler.setStackInSlot(2,new ItemStack(ModItems.IRN_BRU.get(),
-                    iEntity.itemHandler.getStackInSlot(2).getCount() + 1));
+    public static void craftItem(IrnBruCanningStationEntity pEntity){
+        Level level = pEntity.level;
+        SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
+        for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+        }
 
-            iEntity.resetProgress();
+        Optional<IrnBruCanningStationRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(IrnBruCanningStationRecipe.Type.INSTANCE, inventory, level);
+
+        if(hasRecipe(pEntity)) {
+            pEntity.itemHandler.extractItem(0, 1, false);
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem(),
+                    pEntity.itemHandler.getStackInSlot(2).getCount() + recipe.get().getResultItem().getCount()));
+
+            pEntity.resetProgress();
         }
     }
 
     public static boolean hasRecipe(IrnBruCanningStationEntity iEntity){
+        Level level = iEntity.level;
+
         SimpleContainer inventory = new SimpleContainer(iEntity.itemHandler.getSlots());
         for (int i = 0; i < iEntity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, iEntity.itemHandler.getStackInSlot(i));
         }
 
-        boolean hasCanInFirstSlot = iEntity.itemHandler.getStackInSlot(1).getItem() == ModItems.Can.get();
+        Optional<IrnBruCanningStationRecipe> can = level.getRecipeManager()
+                .getRecipeFor(IrnBruCanningStationRecipe.Type.INSTANCE, inventory, level);
 
-        return hasCanInFirstSlot && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, new ItemStack(ModItems.IRN_BRU.get(), 1));
+        return can.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
+                canInsertItemIntoOutputSlot(inventory, can.get().getResultItem());
 
     }
 

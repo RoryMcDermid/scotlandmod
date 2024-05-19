@@ -1,0 +1,11 @@
+{
+  "type": "scotlandmod:irn_bru_canning",
+  "ingredients": [
+    {
+      "item": "scotlandmod:can"
+    }
+  ],
+  "output": {
+    "item": "scotlandmod:irn_bru"
+  }
+}
