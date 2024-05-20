@@ -52,8 +52,11 @@ public class IrnBruCanningStationRecipeCategory implements IRecipeCategory<IrnBr
     //may need altered if recipes change
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, IrnBruCanningStationRecipe recipe, IFocusGroup focuses) {
-        //render item 0 in the ingredients to 86, 15
-        builder.addSlot(RecipeIngredientRole.INPUT, 86, 15).addIngredients(recipe.getIngredients().get(0));
+        //render item 0 in the ingredients to 12, 15
+        builder.addSlot(RecipeIngredientRole.INPUT, 12, 15).addIngredients(recipe.getIngredients().get(0));
+
+        //render item 1 in the ingredients to 86, 15
+        builder.addSlot(RecipeIngredientRole.INPUT, 86, 15).addIngredients(recipe.getIngredients().get(1));
 
         //render the result item at 86, 60
         builder.addSlot(RecipeIngredientRole.OUTPUT, 86, 60).addItemStack(recipe.getResultItem());

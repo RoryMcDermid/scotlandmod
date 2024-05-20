@@ -166,6 +166,7 @@ public class IrnBruCanningStationEntity extends BlockEntity implements MenuProvi
 
         if(hasRecipe(pEntity)) {
             pEntity.itemHandler.extractItem(0, 1, false);
+            pEntity.itemHandler.extractItem(1, 1, false);
             pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem(),
                     pEntity.itemHandler.getStackInSlot(2).getCount() + recipe.get().getResultItem().getCount()));
 
