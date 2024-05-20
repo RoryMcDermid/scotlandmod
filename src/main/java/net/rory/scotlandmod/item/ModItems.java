@@ -38,6 +38,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB)));
     public static final RegistryObject<Item> TWINE = ITEMS.register("twine",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB)));
+    public static final RegistryObject<Item> IRN_BRU_CRYSTAL = ITEMS.register("irn_bru_crystal",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB)));
+    public static final RegistryObject<Item> IRN_BRU_CRYSTAL_SUGAR_FREE = ITEMS.register("irn_bru_crystal_sugar_free",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.SCOTLAND_TAB)));
 
 
 

@@ -5,10 +5,10 @@
       "item": "scotlandmod:can"
     },
     {
-      "item": "scotlandmod:irn_bru_crystal"
+      "item": "scotlandmod:irn_bru_crystal_sugar_free"
     }
   ],
   "output": {
-    "item": "scotlandmod:irn_bru"
+    "item": "scotlandmod:irn_bru_sugar_free"
   }
 }

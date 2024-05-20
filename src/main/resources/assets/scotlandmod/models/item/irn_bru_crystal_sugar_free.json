@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "scotlandmod:item/irn_bru_crystal_sugar_free"
+  }
+}
