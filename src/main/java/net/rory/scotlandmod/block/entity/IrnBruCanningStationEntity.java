@@ -165,10 +165,10 @@ public class IrnBruCanningStationEntity extends BlockEntity implements MenuProvi
                 .getRecipeFor(IrnBruCanningStationRecipe.Type.INSTANCE, inventory, level);
 
         if(hasRecipe(pEntity)) {
-            pEntity.itemHandler.extractItem(0, 1, false);
+            pEntity.itemHandler.extractItem(0, 8, false);
             pEntity.itemHandler.extractItem(1, 1, false);
             pEntity.itemHandler.setStackInSlot(2, new ItemStack(recipe.get().getResultItem().getItem(),
-                    pEntity.itemHandler.getStackInSlot(2).getCount() + recipe.get().getResultItem().getCount()));
+                    pEntity.itemHandler.getStackInSlot(2).getCount() + 8));
 
             pEntity.resetProgress();
         }
@@ -186,7 +186,7 @@ public class IrnBruCanningStationEntity extends BlockEntity implements MenuProvi
                 .getRecipeFor(IrnBruCanningStationRecipe.Type.INSTANCE, inventory, level);
 
         return can.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, can.get().getResultItem());
+                canInsertItemIntoOutputSlot(inventory, can.get().getResultItem()) && inventory.getItem(0).getCount() >= 8;
 
     }
 
