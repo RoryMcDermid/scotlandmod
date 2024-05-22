@@ -1,0 +1,14 @@
+{
+  "type": "scotlandmod:irn_bru_canning",
+  "ingredients": [
+    {
+      "item": "scotlandmod:can"
+    },
+    {
+      "item": "scotlandmod:irn_bru_crystal_fiery"
+    }
+  ],
+  "output": {
+    "item": "scotlandmod:irn_bru_fiery"
+  }
+}
