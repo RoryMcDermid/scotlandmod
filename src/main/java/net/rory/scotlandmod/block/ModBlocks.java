@@ -30,6 +30,8 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
     public static final RegistryObject<SlabBlock> IRN_BRU_SLAB_1901 = registerBlock("irn_bru_slab_1901",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
+    public static final RegistryObject<SlabBlock> IRN_BRU_SLAB_FIERY = registerBlock("irn_bru_slab_fiery",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
     public static final RegistryObject<IrnBruCanningStation> IRN_BRU_CANNING_STATION = registerBlock("irn_bru_canning_station",
             () -> new IrnBruCanningStation(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.SCAFFOLDING)), ModCreativeModeTab.SCOTLAND_TAB);
 
